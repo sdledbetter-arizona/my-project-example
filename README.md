@@ -25,7 +25,7 @@ oml codegen -c device
 oml stop
 ```
 
-The two generators come with the Sierra package: `conops` writes `build/docs/ConOps.md`, and `device` writes the state machine simulator `build/docs/Device.js`.
+The generator come with the SailPoint Identity Governance package: `sm1` writes `build/docs/source-accounts-count.md`.
 
 ## Upgrading Sierra
 
