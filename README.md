@@ -25,9 +25,9 @@ oml codegen -c device
 oml stop
 ```
 
-The generator come with the SailPoint Identity Governance package: `sm1` writes `build/docs/source-accounts-count.md`.
+The generator come with the SailPoint Identity Governance Ontology package: `sm1` writes `build/docs/source-accounts-count.md`.
 
-## Upgrading Sierra
+## Upgrading SailPoint Identity Governance Ontology
 
 A plain `oml install` keeps the installed version. To move to a newer one, name it:
 
