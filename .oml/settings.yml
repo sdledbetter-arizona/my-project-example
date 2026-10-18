@@ -1,0 +1,15 @@
+oml-code:
+  schemaVersion: 1
+
+project:
+  name: "@oml/my-project-example"
+  version: 0.1.0
+  description: "My Project ontologies to test packaging and publishing"
+
+sources: [ src ]
+
+dependencies:
+  "@oml/my-project": "0.1.1"
+
+defaults:
+  render: -m src/md -b build/web -c src/oml/www.example.com/project/bundle.oml

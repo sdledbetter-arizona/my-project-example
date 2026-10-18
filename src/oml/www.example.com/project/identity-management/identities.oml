@@ -1,0 +1,42 @@
+@dc:title "Identities"
+@dc:description "Identity records for the project."
+description <http://www.example.com/project/identity-management/identities#> as identities {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.example.com/method/base#> as base
+    uses <http://www.example.com/method/identity#> as identity
+
+    instance Identity1 : identity:Identity [
+        base:itemName "Avery Morgan"
+        identity:identityType "Human"
+    ]
+
+    instance Identity2 : identity:Identity [
+        base:itemName "Priya Nair"
+        identity:identityType "Human"
+    ]
+
+    instance Identity3 : identity:Identity [
+        base:itemName "Mateo Alvarez"
+        identity:identityType "Human"
+    ]
+
+    instance Identity4 : identity:Identity [
+        base:itemName "Quinn Brooks"
+        identity:identityType "Human"
+    ]
+
+    instance Identity5 : identity:Identity [
+        base:itemName "Taylor Okafor"
+        identity:identityType "Human"
+    ]
+
+    instance Identity6 : identity:Identity [
+        base:itemName "Cedar Build Agent"
+        identity:identityType "Machine"
+    ]
+
+    instance Identity7 : identity:Identity [
+        base:itemName "Ledger Integration"
+        identity:identityType "Machine"
+    ]
+}

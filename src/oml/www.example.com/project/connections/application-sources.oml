@@ -1,0 +1,65 @@
+@dc:title "Application Sources"
+@dc:description "Application sources for the project."
+description <http://www.example.com/project/connections/application-sources#> as application-sources {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.example.com/method/base#> as base
+    uses <http://www.example.com/method/application-source#> as application
+    extends <http://www.example.com/project/identity-management/accounts#> as accounts
+    extends <http://www.example.com/project/access-models/entitlements#> as entitlements
+
+    instance ApplicationSource1 : application:ApplicationSource [
+        base:itemName "Okta Workforce"
+        base:itemDescription "Identity platform for workforce sign-in and application access."
+        application:hasEntitlement entitlements:Entitlement1, entitlements:Entitlement2
+        application:hasAccount accounts:Account1, accounts:Account2, accounts:Account3
+    ]
+
+    instance ApplicationSource2 : application:ApplicationSource [
+        base:itemName "Box"
+        base:itemDescription "Cloud content management and file collaboration service."
+        application:hasEntitlement entitlements:Entitlement3, entitlements:Entitlement4
+        application:hasAccount accounts:Account4, accounts:Account5
+    ]
+
+    instance ApplicationSource3 : application:ApplicationSource [
+        base:itemName "Atlassian Jira"
+        base:itemDescription "Project tracking and issue management service."
+        application:hasEntitlement entitlements:Entitlement5, entitlements:Entitlement6
+        application:hasAccount accounts:Account6, accounts:Account7, accounts:Account8
+    ]
+
+    instance ApplicationSource4 : application:ApplicationSource [
+        base:itemName "Snowflake"
+        base:itemDescription "Cloud data platform for governed analytics and engineering."
+        application:hasEntitlement entitlements:Entitlement7, entitlements:Entitlement8
+        application:hasAccount accounts:Account9, accounts:Account10
+    ]
+
+    instance ApplicationSource5 : application:ApplicationSource [
+        base:itemName "Amazon Web Services"
+        base:itemDescription "Cloud infrastructure platform used for application hosting and operations."
+        application:hasEntitlement entitlements:Entitlement9, entitlements:Entitlement10
+        application:hasAccount accounts:Account11, accounts:Account12
+    ]
+
+    instance ApplicationSource6 : application:ApplicationSource [
+        base:itemName "Slack"
+        base:itemDescription "Team messaging and collaboration workspace."
+        application:hasEntitlement entitlements:Entitlement11, entitlements:Entitlement12
+        application:hasAccount accounts:Account13, accounts:Account14, accounts:Account15
+    ]
+
+    instance ApplicationSource7 : application:ApplicationSource [
+        base:itemName "GitLab"
+        base:itemDescription "Source control and CI/CD platform for software teams."
+        application:hasEntitlement entitlements:Entitlement13, entitlements:Entitlement14
+        application:hasAccount accounts:Account16, accounts:Account17, accounts:Account18
+    ]
+
+    instance ApplicationSource8 : application:ApplicationSource [
+        base:itemName "Workday"
+        base:itemDescription "Human capital management platform for workforce administration."
+        application:hasEntitlement entitlements:Entitlement15
+        application:hasAccount accounts:Account19, accounts:Account20
+    ]
+}

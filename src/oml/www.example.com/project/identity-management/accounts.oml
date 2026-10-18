@@ -1,0 +1,169 @@
+@dc:title "Accounts"
+@dc:description "Account records for the project."
+description <http://www.example.com/project/identity-management/accounts#> as accounts {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.example.com/method/base#> as base
+    uses <http://www.example.com/method/account#> as account
+    extends <http://www.example.com/project/identity-management/identities#> as identities
+    extends <http://www.example.com/project/access-models/entitlements#> as entitlements
+
+    instance Account1 : account:Account [
+        base:itemName "amorgan"
+        account:nativeIdentity "avery.morgan"
+        account:isCorrelated true
+        account:correlatesTo identities:Identity1
+        account:holdsEntitlement entitlements:Entitlement1
+    ]
+
+    instance Account2 : account:Account [
+        base:itemName "pnair"
+        account:nativeIdentity "priya.nair"
+        account:isCorrelated true
+        account:correlatesTo identities:Identity2
+        account:holdsEntitlement entitlements:Entitlement1, entitlements:Entitlement2
+    ]
+
+    instance Account3 : account:Account [
+        base:itemName "Unlinked Okta account"
+        base:itemDescription "Sample account without a correlated identity."
+        account:nativeIdentity "former.contractor.031"
+        account:isCorrelated false
+        account:holdsEntitlement entitlements:Entitlement1
+    ]
+
+    instance Account4 : account:Account [
+        base:itemName "Avery Morgan - Box"
+        account:nativeIdentity "avery.morgan@northwind.example"
+        account:isCorrelated true
+        account:correlatesTo identities:Identity1
+        account:holdsEntitlement entitlements:Entitlement3, entitlements:Entitlement4
+    ]
+
+    instance Account5 : account:Account [
+        base:itemName "Mateo Alvarez - Box"
+        account:nativeIdentity "mateo.alvarez@northwind.example"
+        account:isCorrelated true
+        account:correlatesTo identities:Identity3
+        account:holdsEntitlement entitlements:Entitlement3
+    ]
+
+    instance Account6 : account:Account [
+        base:itemName "Priya Nair - Jira"
+        account:nativeIdentity "priya-nair"
+        account:isCorrelated true
+        account:correlatesTo identities:Identity2
+        account:holdsEntitlement entitlements:Entitlement5
+    ]
+
+    instance Account7 : account:Account [
+        base:itemName "Quinn Brooks - Jira"
+        account:nativeIdentity "quinn-brooks"
+        account:isCorrelated true
+        account:correlatesTo identities:Identity4
+        account:holdsEntitlement entitlements:Entitlement5, entitlements:Entitlement6
+    ]
+
+    instance Account8 : account:Account [
+        base:itemName "Mateo Alvarez - Jira"
+        account:nativeIdentity "mateo-alvarez"
+        account:isCorrelated true
+        account:correlatesTo identities:Identity3
+        account:holdsEntitlement entitlements:Entitlement5
+    ]
+
+    instance Account9 : account:Account [
+        base:itemName "Taylor Okafor - Snowflake"
+        account:nativeIdentity "taylor.okafor"
+        account:isCorrelated true
+        account:correlatesTo identities:Identity5
+        account:holdsEntitlement entitlements:Entitlement7, entitlements:Entitlement8
+    ]
+
+    instance Account10 : account:Account [
+        base:itemName "Priya Nair - Snowflake"
+        account:nativeIdentity "priya.nair"
+        account:isCorrelated true
+        account:correlatesTo identities:Identity2
+        account:holdsEntitlement entitlements:Entitlement7
+    ]
+
+    instance Account11 : account:Account [
+        base:itemName "Cedar Build Agent - AWS"
+        account:nativeIdentity "cedar-build-agent"
+        account:isCorrelated true
+        account:correlatesTo identities:Identity6
+        account:holdsEntitlement entitlements:Entitlement9
+    ]
+
+    instance Account12 : account:Account [
+        base:itemName "Avery Morgan - AWS"
+        account:nativeIdentity "amorgan-cloud"
+        account:isCorrelated true
+        account:correlatesTo identities:Identity1
+        account:holdsEntitlement entitlements:Entitlement9, entitlements:Entitlement10
+    ]
+
+    instance Account13 : account:Account [
+        base:itemName "Avery Morgan - Slack"
+        account:nativeIdentity "avery.morgan"
+        account:isCorrelated true
+        account:correlatesTo identities:Identity1
+        account:holdsEntitlement entitlements:Entitlement11
+    ]
+
+    instance Account14 : account:Account [
+        base:itemName "Priya Nair - Slack"
+        account:nativeIdentity "priya.nair"
+        account:isCorrelated true
+        account:correlatesTo identities:Identity2
+        account:holdsEntitlement entitlements:Entitlement11, entitlements:Entitlement12
+    ]
+
+    instance Account15 : account:Account [
+        base:itemName "Taylor Okafor - Slack"
+        account:nativeIdentity "taylor.okafor"
+        account:isCorrelated true
+        account:correlatesTo identities:Identity5
+        account:holdsEntitlement entitlements:Entitlement11
+    ]
+
+    instance Account16 : account:Account [
+        base:itemName "Mateo Alvarez - GitLab"
+        account:nativeIdentity "malvarez"
+        account:isCorrelated true
+        account:correlatesTo identities:Identity3
+        account:holdsEntitlement entitlements:Entitlement13, entitlements:Entitlement14
+    ]
+
+    instance Account17 : account:Account [
+        base:itemName "Cedar Build Agent - GitLab"
+        account:nativeIdentity "cedar-ci"
+        account:isCorrelated true
+        account:correlatesTo identities:Identity6
+        account:holdsEntitlement entitlements:Entitlement13
+    ]
+
+    instance Account18 : account:Account [
+        base:itemName "Unlinked GitLab account"
+        base:itemDescription "Sample account without a correlated identity."
+        account:nativeIdentity "archived-runner-118"
+        account:isCorrelated false
+        account:holdsEntitlement entitlements:Entitlement13
+    ]
+
+    instance Account19 : account:Account [
+        base:itemName "Avery Morgan - Workday"
+        account:nativeIdentity "avery.morgan.wd"
+        account:isCorrelated true
+        account:correlatesTo identities:Identity1
+        account:holdsEntitlement entitlements:Entitlement15
+    ]
+
+    instance Account20 : account:Account [
+        base:itemName "Taylor Okafor - Workday"
+        account:nativeIdentity "taylor.okafor.wd"
+        account:isCorrelated true
+        account:correlatesTo identities:Identity5
+        account:holdsEntitlement entitlements:Entitlement15
+    ]
+}

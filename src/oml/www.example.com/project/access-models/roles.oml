@@ -1,0 +1,59 @@
+@dc:title "Roles"
+@dc:description "Role records for the project."
+description <http://www.example.com/project/access-models/roles#> as roles {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.example.com/method/base#> as base
+    extends <http://www.example.com/project/access-models/entitlements#> as entitlements
+    extends <http://www.example.com/project/access-models/access-profiles#> as access-profiles
+    uses <http://www.example.com/method/role#> as role
+
+    instance Role1 : role:Role [
+        base:itemName "Identity Platform Administrator"
+        base:itemDescription "Manages workforce identity assignments and lifecycle configuration."
+        role:containsAccessProfile access-profiles:AccessProfile1
+    ]
+
+    instance Role2 : role:Role [
+        base:itemName "Content Operations Specialist"
+        base:itemDescription "Collaborates on shared content and maintains assigned folders."
+        role:containsAccessProfile access-profiles:AccessProfile2
+    ]
+
+    instance Role3 : role:Role [
+        base:itemName "Project Delivery Lead"
+        base:itemDescription "Coordinates delivery work and administers assigned Jira projects."
+        role:containsAccessProfile access-profiles:AccessProfile3
+        role:containsEntitlement entitlements:Entitlement6
+    ]
+
+    instance Role4 : role:Role [
+        base:itemName "Data Insights Analyst"
+        base:itemDescription "Analyzes approved data and supports data engineering workloads."
+        role:containsAccessProfile access-profiles:AccessProfile4
+    ]
+
+    instance Role5 : role:Role [
+        base:itemName "Cloud Operations Observer"
+        base:itemDescription "Reviews cloud resources and configuration for operational work."
+        role:containsAccessProfile access-profiles:AccessProfile5
+    ]
+
+    instance Role6 : role:Role [
+        base:itemName "Team Communications Administrator"
+        base:itemDescription "Administers workspace membership, channels, and collaboration."
+        role:containsAccessProfile access-profiles:AccessProfile6
+        role:containsEntitlement entitlements:Entitlement12
+    ]
+
+    instance Role7 : role:Role [
+        base:itemName "Platform Software Maintainer"
+        base:itemDescription "Develops and maintains assigned source control projects."
+        role:containsAccessProfile access-profiles:AccessProfile7
+    ]
+
+    instance Role8 : role:Role [
+        base:itemName "People Operations Partner"
+        base:itemDescription "Supports workforce administration through assigned HR processes."
+        role:containsAccessProfile access-profiles:AccessProfile8
+    ]
+}

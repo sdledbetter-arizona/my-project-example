@@ -1,0 +1,65 @@
+@dc:title "Access Profiles"
+@dc:description "Access profiles for the project."
+description <http://www.example.com/project/access-models/access-profiles#> as access-profiles {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.example.com/method/base#> as base
+    extends <http://www.example.com/project/access-models/entitlements#> as entitlements
+    extends <http://www.example.com/project/connections/application-sources#> as applications
+    uses <http://www.example.com/method/access-profile#> as access-profile
+
+    instance AccessProfile1 : access-profile:AccessProfile [
+        base:itemName "Workforce Identity Operations"
+        base:itemDescription "Standard workforce access with identity lifecycle administration."
+        access-profile:belongsToApplicationSource applications:ApplicationSource1
+        access-profile:bundles entitlements:Entitlement1, entitlements:Entitlement2
+    ]
+
+    instance AccessProfile2 : access-profile:AccessProfile [
+        base:itemName "Box Content Collaboration"
+        base:itemDescription "Collaborate on content and manage assigned shared folders."
+        access-profile:belongsToApplicationSource applications:ApplicationSource2
+        access-profile:bundles entitlements:Entitlement3, entitlements:Entitlement4
+    ]
+
+    instance AccessProfile3 : access-profile:AccessProfile [
+        base:itemName "Jira Project Contributor"
+        base:itemDescription "Contribute to assigned project issues and workflows."
+        access-profile:belongsToApplicationSource applications:ApplicationSource3
+        access-profile:bundles entitlements:Entitlement5
+    ]
+
+    instance AccessProfile4 : access-profile:AccessProfile [
+        base:itemName "Snowflake Analytics"
+        base:itemDescription "Query approved data and develop assigned analytics workloads."
+        access-profile:belongsToApplicationSource applications:ApplicationSource4
+        access-profile:bundles entitlements:Entitlement7, entitlements:Entitlement8
+    ]
+
+    instance AccessProfile5 : access-profile:AccessProfile [
+        base:itemName "AWS Cloud Observer"
+        base:itemDescription "Review cloud resources and configuration without broad administration."
+        access-profile:belongsToApplicationSource applications:ApplicationSource5
+        access-profile:bundles entitlements:Entitlement9
+    ]
+
+    instance AccessProfile6 : access-profile:AccessProfile [
+        base:itemName "Slack Workspace Collaboration"
+        base:itemDescription "Participate in channels and conversations across the workspace."
+        access-profile:belongsToApplicationSource applications:ApplicationSource6
+        access-profile:bundles entitlements:Entitlement11
+    ]
+
+    instance AccessProfile7 : access-profile:AccessProfile [
+        base:itemName "GitLab Project Development"
+        base:itemDescription "Contribute to projects and maintain assigned repositories."
+        access-profile:belongsToApplicationSource applications:ApplicationSource7
+        access-profile:bundles entitlements:Entitlement13, entitlements:Entitlement14
+    ]
+
+    instance AccessProfile8 : access-profile:AccessProfile [
+        base:itemName "Workday HR Partner"
+        base:itemDescription "Access assigned employee records and HR processes."
+        access-profile:belongsToApplicationSource applications:ApplicationSource8
+        access-profile:bundles entitlements:Entitlement15
+    ]
+}

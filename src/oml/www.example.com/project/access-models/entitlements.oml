@@ -1,0 +1,82 @@
+@dc:title "Entitlements"
+@dc:description "Entitlement records for the project."
+description <http://www.example.com/project/access-models/entitlements#> as entitlements {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.example.com/method/base#> as base
+    uses <http://www.example.com/method/entitlement#> as entitlement
+
+    instance Entitlement1 : entitlement:Entitlement [
+        base:itemName "Workforce Standard"
+        base:itemDescription "Standard workforce sign-in and application assignment."
+    ]
+
+    instance Entitlement2 : entitlement:Entitlement [
+        base:itemName "Identity Lifecycle Administrator"
+        base:itemDescription "Manage workforce identity lifecycle settings and assignments."
+    ]
+
+    instance Entitlement3 : entitlement:Entitlement [
+        base:itemName "Box Collaborator"
+        base:itemDescription "Create and collaborate on permitted Box content."
+    ]
+
+    instance Entitlement4 : entitlement:Entitlement [
+        base:itemName "Box Content Manager"
+        base:itemDescription "Manage shared content and folders in assigned Box spaces."
+    ]
+
+    instance Entitlement5 : entitlement:Entitlement [
+        base:itemName "Jira Project Contributor"
+        base:itemDescription "View and update issues in assigned Jira projects."
+    ]
+
+    instance Entitlement6 : entitlement:Entitlement [
+        base:itemName "Jira Project Administrator"
+        base:itemDescription "Configure projects, workflows, and project-level permissions."
+    ]
+
+    instance Entitlement7 : entitlement:Entitlement [
+        base:itemName "Snowflake Analyst"
+        base:itemDescription "Query approved data sets and create analytics workloads."
+    ]
+
+    instance Entitlement8 : entitlement:Entitlement [
+        base:itemName "Snowflake Data Engineer"
+        base:itemDescription "Develop and operate assigned data pipelines and schemas."
+    ]
+
+    instance Entitlement9 : entitlement:Entitlement [
+        base:itemName "AWS Read Only"
+        base:itemDescription "View permitted cloud resources and configuration."
+    ]
+
+    instance Entitlement10 : entitlement:Entitlement [
+        base:itemName "AWS Account Operator"
+        base:itemDescription "Operate assigned cloud resources without account-wide administration."
+    ]
+
+    instance Entitlement11 : entitlement:Entitlement [
+        base:itemName "Slack Workspace Member"
+        base:itemDescription "Participate in approved workspace channels and conversations."
+    ]
+
+    instance Entitlement12 : entitlement:Entitlement [
+        base:itemName "Slack Workspace Administrator"
+        base:itemDescription "Manage workspace configuration, members, and channel settings."
+    ]
+
+    instance Entitlement13 : entitlement:Entitlement [
+        base:itemName "GitLab Developer"
+        base:itemDescription "Contribute code to assigned GitLab projects."
+    ]
+
+    instance Entitlement14 : entitlement:Entitlement [
+        base:itemName "GitLab Maintainer"
+        base:itemDescription "Manage project settings, memberships, and merge controls."
+    ]
+
+    instance Entitlement15 : entitlement:Entitlement [
+        base:itemName "Workday HR Partner"
+        base:itemDescription "Access assigned workforce records and HR business processes."
+    ]
+}
